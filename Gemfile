@@ -29,9 +29,13 @@ gem 'faker'
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+# Devise
+gem 'devise'
 
 # Puma server
 gem 'puma'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
