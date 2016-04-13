@@ -1,0 +1,34 @@
+<% if(notice) %>
+  <p id="notice" class="alert alert-danger"><%= notice %></p>
+<% end %>
+<h1 class="text-center">Blog Posts</h1>
+<div class="container">
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Post</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody class="">
+        <% @articles.each do |article| %>
+          <tr>
+            <td><%= article.title %></td>
+            <td><%= article.post %></td>
+            <td><%= link_to 'Show', article ,{class:"btn btn-info btn-lg"} %></td>
+            <td><%= link_to 'Edit', edit_article_path(article),{class:"btn btn-primary btn-lg"} %></td>
+            <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?'  } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Article', new_article_path , {class: "btn btn-info"} %>
+
+  </div>
+</div>
